@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Media queries
+---------------------------------------------------------- */
+/* Mixins
+---------------------------------------------------------- */
+/* Default stylings
+---------------------------------------------------------- */
+body {
+  background: #eee;
+  font-family: Calibri, Candara, Segoe, "Segoe UI";
+  font-size: 13px;
+  font-weight: 100;
+  color: #333; }
+
+table {
+  width: 100%; }
+  table td, table th {
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 5px; }
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 20px; }
+
+h2 {
+  font-size: 21px; }
+
+h3 {
+  font-size: 17px;
+  margin-bottom: 10px; }
+
+h4 {
+  font-size: 13px; }
+
+h5 {
+  font-size: 9px;
+  color: #999; }
+
+button,
+input[type="button"] {
+  padding: 3px 10px;
+  background: white;
+  border: 2px solid #666;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer; }
+  button:hover,
+  input[type="button"]:hover {
+    border-color: #333;
+    color: #333; }
+
+b, strong {
+  font-weight: bold; }
+
+/* Main wrapper
+---------------------------------------------------------- */
+.Wrapper {
+  background: white;
+  margin: 0 auto;
+  padding: 20px;
+  padding-bottom: 40px;
+  min-height: 600px; }
+  @media screen and (min-width: 1024px) {
+    .Wrapper {
+      /* MQ Widescreen */
+      padding: 40px;
+      padding-bottom: 60px;
+      width: 1000px; } }
+
+/* Content Header
+---------------------------------------------------------- */
+
+/*# sourceMappingURL=style.css.map */

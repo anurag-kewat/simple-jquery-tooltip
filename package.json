@@ -1,0 +1,23 @@
+{
+  "name": "baba-tooltip",
+  "version": "1.0.0",
+  "description": "Tooltip",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anuriqs/baba-tooltip.git"
+  },
+  "keywords": [
+    "Tooltip",
+    "popup"
+  ],
+  "author": "Anurag Kewat",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/anuriqs/baba-tooltip/issues"
+  },
+  "homepage": "https://github.com/anuriqs/baba-tooltip#readme"
+}
