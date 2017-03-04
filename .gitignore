@@ -6,5 +6,4 @@ app/.DS_Store
 
 *.css.map
 
-scss/
-coffee/
+js/temptooltip.js

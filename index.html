@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Baba - Tooltip</title>
+	<title>Simple CoffeeScript Tooltip Plugin</title>
 	<link rel="stylesheet" href="css/style.css" charset="utf-8">
+	<!-- <link rel="stylesheet" href="css/tooltip.css" charset="utf-8"> -->
 </head>
 <body>
 	<div class="Wrapper">
-		<h2>Simple jquery tooltip</h2>
+		<div class="MainHeader">
+			<h2>Simple jquery tooltip</h2>	
+		</div>
+		<div class="MainContent">
+			<div class="Description">
+				<p></p>
+			</div>	
+			<div class="Section Example">
+				<p class="Section_desc"></p>
+
+				<div class="TooltipWrapper">
+					<a href="" class="TooltipWrapper_link">what am I?</a>
+
+					<div class="TooltipWrapper_content">
+						<p>I am simple jquery tooltip. I am good.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
 	</div>
+
+	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+	<script type="text/javascript" src="js/jquery.simpleTooltip.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".TooltipWrapper").simpleTooltip();
+		});
+	</script>
 </body>
 </html>

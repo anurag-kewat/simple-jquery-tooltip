@@ -1,3 +1,3 @@
-# baba-tooltip
+# Simple CoffeeScript Tooltip Plugin
 
-Simple way to add a tooltip using CoffeeScript/Jquery
+Quick and Easy Tooltip using CoffeeScript/Jquery

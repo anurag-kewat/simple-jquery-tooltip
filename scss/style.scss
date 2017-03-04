@@ -1,0 +1,29 @@
+@import "reset";
+@import "base";
+
+/* Main wrapper
+---------------------------------------------------------- */
+.Wrapper {
+	background: white;
+	margin: 0 auto;
+	padding: 20px 20px 40px;
+	min-height: 600px;
+
+	@include respond-to(widescreen) {
+		padding-bottom: 60px;
+		width: 1000px;
+	}
+}
+
+/*  Header
+---------------------------------------------------------- */
+.MainHeader {
+	padding: 30px 20px;
+	border-bottom: 1px solid $grey4;
+}
+
+.MainContent {
+	padding: 30px 0;
+}
+
+@import "tooltip";

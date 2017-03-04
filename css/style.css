@@ -100,17 +100,76 @@ b, strong {
 .Wrapper {
   background: white;
   margin: 0 auto;
-  padding: 20px;
-  padding-bottom: 40px;
+  padding: 20px 20px 40px;
   min-height: 600px; }
   @media screen and (min-width: 1024px) {
     .Wrapper {
       /* MQ Widescreen */
-      padding: 40px;
       padding-bottom: 60px;
       width: 1000px; } }
 
-/* Content Header
+/*  Header
 ---------------------------------------------------------- */
+.MainHeader {
+  padding: 30px 20px;
+  border-bottom: 1px solid #ccc; }
+
+.MainContent {
+  padding: 30px 0; }
+
+.TooltipWrapper {
+  position: relative;
+  display: inline-block; }
+  .TooltipWrapper .TooltipWrapper_content {
+    display: none;
+    background: #f1f9ff;
+    border: 1px solid #97BFD8;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    margin-top: 18px;
+    white-space: nowrap; }
+    @media screen and (min-width: 600px) {
+      .TooltipWrapper .TooltipWrapper_content {
+        /* MQ Tablet */
+        max-width: 370px; } }
+    .TooltipWrapper .TooltipWrapper_content:before, .TooltipWrapper .TooltipWrapper_content:after {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%; }
+    .TooltipWrapper .TooltipWrapper_content:before {
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid #97BFD8;
+      border-bottom: none;
+      bottom: -16px;
+      top: auto;
+      margin-left: -7px; }
+    .TooltipWrapper .TooltipWrapper_content:after {
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-top: 14px solid #f1f9ff;
+      border-bottom: none;
+      bottom: -14px;
+      top: auto;
+      margin-left: -6px; }
+    .TooltipWrapper .TooltipWrapper_content.TooltipWrapper_content--showBelow:before {
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #97BFD8;
+      border-top: none;
+      top: -16px;
+      bottom: auto;
+      margin-left: -7px; }
+    .TooltipWrapper .TooltipWrapper_content.TooltipWrapper_content--showBelow:after {
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 14px solid #f1f9ff;
+      border-top: none;
+      top: -14px;
+      bottom: auto;
+      margin-left: -6px; }
 
 /*# sourceMappingURL=style.css.map */
