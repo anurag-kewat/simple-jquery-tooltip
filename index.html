@@ -8,14 +8,28 @@
 <body>
 	<div class="Wrapper">
 		<div class="MainHeader">
-			<h2>Simple jquery tooltip</h2>	
+			<h1>Simple CoffeeScript Tooltip Plugin</h1>	
+			<span>Quick and Easy Tooltip using CoffeeScript/Jquery</span>
 		</div>
 		<div class="MainContent">
 			<div class="Description">
 				<p></p>
 			</div>	
+
 			<div class="Section Example">
-				<p class="Section_desc"></p>
+				<p class="Section_desc">Example 1:</p>
+
+				<div id="tooltipEg1" class="TooltipWrapper">
+					<a href="" class="TooltipWrapper_link">what am I?</a>
+
+					<div class="TooltipWrapper_content">
+						<p>I am simple jquery tooltip. I am good.</p>
+					</div>
+				</div>
+			</div>
+
+			<div id="tooltipEg2" class="Section Example">
+				<p class="Section_desc">Example 2:</p>
 
 				<div class="TooltipWrapper">
 					<a href="" class="TooltipWrapper_link">what am I?</a>
@@ -24,8 +38,9 @@
 						<p>I am simple jquery tooltip. I am good.</p>
 					</div>
 				</div>
-
 			</div>
+
+
 		</div>
 	</div>
 
@@ -34,7 +49,11 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			$(".TooltipWrapper").simpleTooltip();
+			$("#tooltipEg1").simpleTooltip();
+
+			$("#tooltipEg2").simpleTooltip();
+
+			tooltipEg1
 		});
 	</script>
 </body>

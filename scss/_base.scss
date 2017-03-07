@@ -4,10 +4,13 @@ $font-georgia: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
 $sepiaBg: #f0e2c7;
 
 // font sizes
-$size21: 21px;
-$size17: 17px;
-$size13: 13px;
-$size9: 9px;
+$size26: 2.6em;
+$size22: 2.2em;
+$size18: 1.8em;
+$size15: 1.5em;
+$size13: 1.3em;
+$size11: 1.1em;
+$size9: .9em;
 
 // Color codes
 $grey1: #333;
@@ -68,10 +71,11 @@ $grey5: #eee;
 
 /* Default stylings
 ---------------------------------------------------------- */
+
 body {
 	background: #eee;
 	font-family: $font-base;
-	font-size: $size13;
+	font-size: 62.5%;
 	font-weight: 100;
 	color: #333;
 }
@@ -86,28 +90,34 @@ table {
 	}
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font-georgia;
+	margin-bottom: 15px;
+}
+
 h1 {
-	font-size: 30px;
-	// font-weight: bold;
-	margin-bottom: 20px;
+	font-size: $size26;
 }
 
 h2 {
-	font-size: $size21;
+	font-size: $size22;
 }
 
 h3 {
-	font-size: $size17;
-	margin-bottom: 10px;
+	font-size: $size18;
 }
 
 h4 {
-	font-size: $size13;
+	font-size: $size15;
 }
 
 h5 {
-	font-size: $size9;
+	font-size: $size13;
 	color: #999;
+}
+
+p, span, a {
+	font-size: $size15;
 }
 
 button,

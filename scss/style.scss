@@ -6,12 +6,13 @@
 .Wrapper {
 	background: white;
 	margin: 0 auto;
-	padding: 20px 20px 40px;
+	padding: 0px 20px 40px;
 	min-height: 600px;
+	border: 1px solid $grey4;
 
 	@include respond-to(widescreen) {
 		padding-bottom: 60px;
-		width: 1000px;
+		width: 900px;
 	}
 }
 
@@ -20,10 +21,25 @@
 .MainHeader {
 	padding: 30px 20px;
 	border-bottom: 1px solid $grey4;
+
+	span {
+		font-style: italic;
+	}
 }
 
 .MainContent {
-	padding: 30px 0;
+	padding: 30px 20px;
+}
+
+.Section {
+	background: $grey5;
+	border: 1px solid $grey4;
+	padding: 10px;
+	margin-bottom: 20px;
+
+	.Section_desc {
+		margin-bottom: 10px;
+	}
 }
 
 @import "tooltip";

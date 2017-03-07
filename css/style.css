@@ -50,7 +50,7 @@ table {
 body {
   background: #eee;
   font-family: Calibri, Candara, Segoe, "Segoe UI";
-  font-size: 13px;
+  font-size: 62.5%;
   font-weight: 100;
   color: #333; }
 
@@ -61,23 +61,28 @@ table {
     text-align: center;
     padding: 5px; }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
+  margin-bottom: 15px; }
+
 h1 {
-  font-size: 30px;
-  margin-bottom: 20px; }
+  font-size: 2.6em; }
 
 h2 {
-  font-size: 21px; }
+  font-size: 2.2em; }
 
 h3 {
-  font-size: 17px;
-  margin-bottom: 10px; }
+  font-size: 1.8em; }
 
 h4 {
-  font-size: 13px; }
+  font-size: 1.5em; }
 
 h5 {
-  font-size: 9px;
+  font-size: 1.3em;
   color: #999; }
+
+p, span, a {
+  font-size: 1.5em; }
 
 button,
 input[type="button"] {
@@ -85,7 +90,7 @@ input[type="button"] {
   background: white;
   border: 2px solid #666;
   color: #666;
-  font-size: 13px;
+  font-size: 1.3em;
   cursor: pointer; }
   button:hover,
   input[type="button"]:hover {
@@ -100,22 +105,33 @@ b, strong {
 .Wrapper {
   background: white;
   margin: 0 auto;
-  padding: 20px 20px 40px;
-  min-height: 600px; }
+  padding: 0px 20px 40px;
+  min-height: 600px;
+  border: 1px solid #ccc; }
   @media screen and (min-width: 1024px) {
     .Wrapper {
       /* MQ Widescreen */
       padding-bottom: 60px;
-      width: 1000px; } }
+      width: 900px; } }
 
 /*  Header
 ---------------------------------------------------------- */
 .MainHeader {
   padding: 30px 20px;
   border-bottom: 1px solid #ccc; }
+  .MainHeader span {
+    font-style: italic; }
 
 .MainContent {
-  padding: 30px 0; }
+  padding: 30px 20px; }
+
+.Section {
+  background: #eee;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px; }
+  .Section .Section_desc {
+    margin-bottom: 10px; }
 
 .TooltipWrapper {
   position: relative;
