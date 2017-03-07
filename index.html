@@ -1,70 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Simple CoffeeScript Tooltip Plugin</title>
-	<link rel="stylesheet" href="css/style.css" charset="utf-8">
-	<!-- <link rel="stylesheet" href="css/tooltip.css" charset="utf-8"> -->
+    <title>Simple CoffeeScript Tooltip Plugin</title>
+    <link rel="stylesheet" href="css/style.css" charset="utf-8">
+    <!-- <link rel="stylesheet" href="css/tooltip.css" charset="utf-8"> -->
 </head>
 <body>
-	<div class="Wrapper">
-		<div class="MainHeader">
-			<h1>Simple CoffeeScript Tooltip Plugin</h1>	
-			<span>Quick and Easy Tooltip using CoffeeScript/Jquery</span>
-		</div>
-		<div class="MainContent">
-			<div class="Description">
-				<p></p>
-			</div>	
+    <div class="Wrapper">
+        <div class="MainHeader">
+            <h1>Simple CoffeeScript Tooltip Plugin</h1> 
+            <span>Quick and Easy Tooltip using CoffeeScript/Jquery</span>
+        </div>
+        <div class="MainContent">
+            <div class="Description">
+                <p></p>
+            </div>  
 
-			<div class="Section Example">
-				<p class="Section_desc">Example 1: Simple Tooltip</p>
+            <div class="Section Example">
+                <div class="Section_desc">
+                    <h4>Example 1:</h4>
+                    <p>Simple Tooltip to show content on hover</p>  
+                </div>
+                
+                <div class="Section_code">
+                    $("#tooltipEg1").simpleTooltip()
+                </div>
 
-				<div id="tooltipEg1" class="TooltipWrapper">
-					<a href="" class="TooltipWrapper_link">what am I?</a>
+                <strong class="Section_demoTitle">Check demo here - </strong>
+                <div id="tooltipEg1" class="TooltipWrapper">
+                    <a href="" class="TooltipWrapper_link">what am I?</a>
+                    <div class="TooltipWrapper_content">
+                        <p>I am simple jquery tooltip. I am good.</p>
+                    </div>
+                </div>
+            </div>
 
-					<div class="TooltipWrapper_content">
-						<p>I am simple jquery tooltip. I am good.</p>
-					</div>
-				</div>
-			</div>
+            <div class="Section Example">
+                <div class="Section_desc">
+                    <h4>Example 2:</h4>
+                    <p>Tooltip to show it below</p>
+                </div>
+                <div class="Section_code">
+                    $("#tooltipEg2").simpleTooltip({
+                        tooltipPos: "below"
+                    });
+                </div>
 
-			<div id="tooltipEg2" class="Section Example">
-				<p class="Section_desc">Example 2: Tooltip on mobile screens</p>
+                <strong class="Section_demoTitle">Check demo here - </strong>
+                <div id="tooltipEg2" class="TooltipWrapper">
+                    <a href="" class="TooltipWrapper_link">what am I?</a>
 
-				<div class="TooltipWrapper">
-					<a href="" class="TooltipWrapper_link">what am I?</a>
+                    <div class="TooltipWrapper_content LeftArrow">
+                        <p>I am simple jquery tooltip. I am good.</p>
+                    </div>
+                </div>
 
-					<div class="TooltipWrapper_content LeftArrow">
-						<p>I am simple jquery tooltip. I am good.</p>
-					</div>
-				</div>
+                <!-- <div class="FloatRight">
+                    <div id="tooltipEg3" class="TooltipWrapper">
+                        <a href="" class="TooltipWrapper_link">what am I?</a>
 
-				<div class="FloatRight">
-					<div class="TooltipWrapper">
-						<a href="" class="TooltipWrapper_link">what am I?</a>
-
-						<div class="TooltipWrapper_content">
-							<p>I am simple jquery tooltip. I am good.</p>
-						</div>
-					</div>	
-				</div>
-			</div>
+                        <div class="TooltipWrapper_content">
+                            <p>I am simple jquery tooltip. I am good.</p>
+                        </div>
+                    </div>  
+                </div> -->
+            </div>
 
 
-		</div>
-	</div>
+        </div>
+    </div>
 
-	<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
-	<script type="text/javascript" src="js/jquery.simpleTooltip.js"></script>
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.simpleTooltip.js"></script>
 
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$("#tooltipEg1").simpleTooltip();
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#tooltipEg1").simpleTooltip();
 
-			$("#tooltipEg2").simpleTooltip();
-
-			tooltipEg1
-		});
-	</script>
+            $("#tooltipEg2").simpleTooltip({
+                tooltipPos: "below"
+            });
+        });
+    </script>
 </body>
 </html>

@@ -4,7 +4,13 @@
 # Anurag Kewat: 2017
 
 (($) ->
-	$.fn.simpleTooltip = ->
+	$.fn.simpleTooltip = (options) ->
+
+		defaults =
+			tooltipPos: "top" # position for tooltip to show - "top" or "bottom"
+
+		settings = $.extend({}, defaults, options)
+
 		@each ->
 			@elTooltip = $(this)
 			@elTooltipLink = @elTooltip.find(".TooltipWrapper_link")
@@ -12,33 +18,33 @@
 
 			@elTooltipLink.mouseover (e) =>
 				e.preventDefault()
-				element = $(e.target)
+				el = $(e.target)
 				
-				elementHeight = element.height()
-				tooltipContent = element.parents(".TooltipWrapper").find(@elTooltipContent)
+				elHeight = el.height()
+				tooltipContent = el.parents(".TooltipWrapper").find(@elTooltipContent)
 
 				posTop = "auto"
-				posBottom = elementHeight + 20
+				posBottom = elHeight + 20
 				posLeft = -(tooltipContent.width()/2 + 10)
 				posRight = "auto"
 
-				elementOffset = element.offset()
+				elOffset = el.offset()
 
 				tooltipContent.removeClass("TooltipWrapper_content--showBelow").removeClass("LeftArrow")
 
-				if elementOffset.top - $(window).scrollTop() < elementHeight + tooltipContent.height()
+				if @isSpaceAbove(elOffset, elHeight, tooltipContent) or settings.tooltipPos is "below"
 					tooltipContent.addClass("TooltipWrapper_content--showBelow")
-					posTop = elementHeight
+					posTop = elHeight
 					posBottom = "auto"
 
-				marginLeft = element.width()/2
+				marginLeft = el.width()/2
 
-				if elementOffset.left < 100
+				if elOffset.left < 100
 					tooltipContent.addClass("LeftArrow")
 					posLeft = 0
 					marginLeft = 0
 
-				else if $(window).width() - elementOffset.left < 130
+				else if $(window).width() - elOffset.left < 130
 					tooltipContent.addClass("RightArrow")
 					posLeft = "auto"
 					posRight = 0
@@ -49,18 +55,23 @@
 					"bottom": posBottom
 					"left": posLeft
 					"right": posRight
+					"color": settings.fontColor
 					"margin-left": marginLeft
 
 				tooltipContent.show()
 
-			# @elTooltipLink.mouseout =>
-			# 	$(@elTooltipContent).hide()
+			@isSpaceAbove = (elOffset, elHeight, tooltipContent) ->
+				elOffset.top - $(window).scrollTop() < elHeight + tooltipContent.height()
 
-			# $(@elTooltipContent).mouseover ->
-			# 	$(this).show()
+			@elTooltipLink.mouseout =>
+				$(@elTooltipContent).hide()
 
-			# $(@elTooltipContent).mouseout =>
-			# 	$(@elTooltipContent).hide()
+			$(@elTooltipContent).mouseover ->
+				$(this).show()
+
+			$(@elTooltipContent).mouseout =>
+				$(@elTooltipContent).hide()
+
 		return
 	return
 ) jQuery

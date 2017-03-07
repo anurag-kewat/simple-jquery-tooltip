@@ -53,6 +53,17 @@
 	.Section_desc {
 		margin-bottom: 10px;
 	}
+
+	.Section_code {
+		margin: 7px 0;
+		padding: 8px 15px;
+		background: #ffffcc;
+		font-size: $size14;
+	}
+
+	.Section_demoTitle {
+		font-size: $size15;
+	}
 }
 
 @import "tooltip";
