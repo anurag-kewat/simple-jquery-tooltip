@@ -78,6 +78,7 @@ body {
 	font-size: 62.5%;
 	font-weight: 100;
 	color: #333;
+	line-height: 1.5;
 }
 
 table {
@@ -118,6 +119,10 @@ h5 {
 
 p, span, a {
 	font-size: $size15;
+}
+
+a {
+	color: red;
 }
 
 button,

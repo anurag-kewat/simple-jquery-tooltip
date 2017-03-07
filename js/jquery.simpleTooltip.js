@@ -6,47 +6,43 @@
         this.elTooltip = $(this);
         this.elTooltipLink = this.elTooltip.find(".TooltipWrapper_link");
         this.elTooltipContent = this.elTooltip.find(".TooltipWrapper_content");
-        this.elTooltipLink.mouseover((function(_this) {
+        return this.elTooltipLink.mouseover((function(_this) {
           return function(e) {
-            var bottom, element, elementHeight, elementOffset, left, tooltipContent, top;
+            var element, elementHeight, elementOffset, marginLeft, posBottom, posLeft, posRight, posTop, tooltipContent;
             e.preventDefault();
             element = $(e.target);
             elementHeight = element.height();
             tooltipContent = element.parents(".TooltipWrapper").find(_this.elTooltipContent);
-            top = "auto";
-            bottom = elementHeight + 20;
-            left = -(tooltipContent.width() / 2 + 10);
+            posTop = "auto";
+            posBottom = elementHeight + 20;
+            posLeft = -(tooltipContent.width() / 2 + 10);
+            posRight = "auto";
             elementOffset = element.offset();
+            tooltipContent.removeClass("TooltipWrapper_content--showBelow").removeClass("LeftArrow");
             if (elementOffset.top - $(window).scrollTop() < elementHeight + tooltipContent.height()) {
               tooltipContent.addClass("TooltipWrapper_content--showBelow");
-              top = elementHeight;
-              bottom = "auto";
-            } else {
-              tooltipContent.removeClass("TooltipWrapper_content--showBelow");
+              posTop = elementHeight;
+              posBottom = "auto";
             }
-            if (elementOffset.left < 180) {
-              left = 0;
+            marginLeft = element.width() / 2;
+            if (elementOffset.left < 100) {
+              tooltipContent.addClass("LeftArrow");
+              posLeft = 0;
+              marginLeft = 0;
+            } else if ($(window).width() - elementOffset.left < 130) {
+              tooltipContent.addClass("RightArrow");
+              posLeft = "auto";
+              posRight = 0;
+              marginLeft = 0;
             }
             tooltipContent.css({
-              "top": top,
-              "bottom": bottom,
-              "left": left,
-              "margin-left": element.width() / 2
+              "top": posTop,
+              "bottom": posBottom,
+              "left": posLeft,
+              "right": posRight,
+              "margin-left": marginLeft
             });
             return tooltipContent.show();
-          };
-        })(this));
-        this.elTooltipLink.mouseout((function(_this) {
-          return function() {
-            return $(_this.elTooltipContent).hide();
-          };
-        })(this));
-        $(this.elTooltipContent).mouseover(function() {
-          return $(this).show();
-        });
-        return $(this.elTooltipContent).mouseout((function(_this) {
-          return function() {
-            return $(_this.elTooltipContent).hide();
           };
         })(this));
       });

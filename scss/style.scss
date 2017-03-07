@@ -1,6 +1,19 @@
 @import "reset";
 @import "base";
 
+
+.ClearFix {
+	@include clearfix;
+}
+
+.FloatLeft {
+	float: left;
+}
+
+.FloatRight {
+	float: right;
+}
+
 /* Main wrapper
 ---------------------------------------------------------- */
 .Wrapper {

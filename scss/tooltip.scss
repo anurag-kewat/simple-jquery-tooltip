@@ -23,13 +23,32 @@
 			position: absolute; left: 50%;
 		}
 
+		&.LeftArrow {
+			// left: 0; margin-left: 0;
+
+			&:before, &:after {
+				left: 30px;
+			}
+		}
+
+		&.RightArrow {
+			&:before {
+				right: 30px;	
+				left: auto;
+			} 
+			&:after {
+				right: 31px;
+				left: auto;
+			}	
+		}
+
 		&:before {
 			border-left: 15px solid transparent;
 			border-right: 15px solid transparent;
 			border-top: 15px solid #97BFD8;
 			border-bottom: none;
 			bottom: -16px; top: auto;
-			margin-left: -7px;
+			margin-left: -15px;
 		}
 
 		&:after {
@@ -38,7 +57,7 @@
 			border-top: 14px solid #f1f9ff;
 			border-bottom: none;
 			bottom: -14px; top: auto;
-			margin-left: -6px;
+			margin-left: -14px;
 		}
 
 		&.TooltipWrapper_content--showBelow {
@@ -48,7 +67,7 @@
 				border-bottom: 15px solid #97BFD8;
 				border-top: none;
 				top: -16px; bottom: auto;
-				margin-left: -7px;
+				margin-left: -15px;
 			}
 
 			&:after {
@@ -57,7 +76,7 @@
 				border-bottom: 14px solid #f1f9ff;
 				border-top: none;
 				top: -14px; bottom: auto;
-				margin-left: -6px;
+				margin-left: -14px;
 			}
 		}
 	}

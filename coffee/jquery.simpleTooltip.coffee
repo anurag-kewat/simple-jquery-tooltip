@@ -17,38 +17,50 @@
 				elementHeight = element.height()
 				tooltipContent = element.parents(".TooltipWrapper").find(@elTooltipContent)
 
-				top = "auto"
-				bottom = elementHeight + 20
-				left = -(tooltipContent.width()/2 + 10)
+				posTop = "auto"
+				posBottom = elementHeight + 20
+				posLeft = -(tooltipContent.width()/2 + 10)
+				posRight = "auto"
 
 				elementOffset = element.offset()
 
+				tooltipContent.removeClass("TooltipWrapper_content--showBelow").removeClass("LeftArrow")
+
 				if elementOffset.top - $(window).scrollTop() < elementHeight + tooltipContent.height()
 					tooltipContent.addClass("TooltipWrapper_content--showBelow")
-					top = elementHeight
-					bottom = "auto"
-				else
-					tooltipContent.removeClass("TooltipWrapper_content--showBelow")
+					posTop = elementHeight
+					posBottom = "auto"
 
-				if elementOffset.left < 180
-					left = 0
+				marginLeft = element.width()/2
+
+				if elementOffset.left < 100
+					tooltipContent.addClass("LeftArrow")
+					posLeft = 0
+					marginLeft = 0
+
+				else if $(window).width() - elementOffset.left < 130
+					tooltipContent.addClass("RightArrow")
+					posLeft = "auto"
+					posRight = 0
+					marginLeft = 0
 
 				tooltipContent.css
-					"top": top
-					"bottom": bottom
-					"left": left
-					"margin-left": element.width()/2
+					"top": posTop
+					"bottom": posBottom
+					"left": posLeft
+					"right": posRight
+					"margin-left": marginLeft
 
 				tooltipContent.show()
 
-			@elTooltipLink.mouseout =>
-				$(@elTooltipContent).hide()
+			# @elTooltipLink.mouseout =>
+			# 	$(@elTooltipContent).hide()
 
-			$(@elTooltipContent).mouseover ->
-				$(this).show()
+			# $(@elTooltipContent).mouseover ->
+			# 	$(this).show()
 
-			$(@elTooltipContent).mouseout =>
-				$(@elTooltipContent).hide()
+			# $(@elTooltipContent).mouseout =>
+			# 	$(@elTooltipContent).hide()
 		return
 	return
 ) jQuery
