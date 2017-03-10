@@ -16,10 +16,6 @@
 		margin-top: 18px;
 		white-space: nowrap;
 
-		@include respond-to(tablet) {
-			max-width: 370px;
-		}
-
 		&:before, &:after {
 			content: '';
 			width: 0;

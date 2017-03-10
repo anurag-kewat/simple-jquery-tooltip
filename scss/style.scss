@@ -18,13 +18,14 @@
 ---------------------------------------------------------- */
 .Wrapper {
 	background: white;
-	margin: 0 auto;
-	padding: 0px 20px 40px;
+	margin: 0 10px;
+	padding: 0px 10px 40px;
 	min-height: 600px;
 	border: 1px solid $grey4;
 
 	@include respond-to(widescreen) {
-		padding-bottom: 60px;
+		margin: 0 auto;
+		padding: 0px 20px 60px 20px;
 		width: 900px;
 	}
 }
@@ -41,16 +42,22 @@
 }
 
 .MainContent {
-	padding: 30px 20px;
+	padding: 15px 10px;
+
+	@include respond-to(widescreen) {
+		padding: 30px 20px;		
+	}
 }
 
 .Section {
-	// background: $grey5;
-	// border: 1px solid $grey4;
 	border-bottom: 1px solid $grey4;
 	padding: 10px;
-	padding-bottom: 30px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+
+	@include respond-to(widescreen) { 
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+	}
 	
 	.Section_desc {
 		margin-bottom: 10px;
@@ -69,6 +76,15 @@
 
 	.ClearFix {
 		margin: 15px 0 0;
+
+		img {
+			margin-bottom: 10px;
+
+			@include respond-to(widescreen) { 
+				float: left;
+				margin-bottom: 0;
+			}
+		}
 	}
 
 	img {
@@ -78,5 +94,3 @@
 		margin-right: 20px;
 	}
 }
-
-@import "tooltip";

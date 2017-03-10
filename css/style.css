@@ -122,14 +122,15 @@ b, strong {
 ---------------------------------------------------------- */
 .Wrapper {
   background: white;
-  margin: 0 auto;
-  padding: 0px 20px 40px;
+  margin: 0 10px;
+  padding: 0px 10px 40px;
   min-height: 600px;
   border: 1px solid #ccc; }
   @media screen and (min-width: 1024px) {
     .Wrapper {
       /* MQ Widescreen */
-      padding-bottom: 60px;
+      margin: 0 auto;
+      padding: 0px 20px 60px 20px;
       width: 900px; } }
 
 /*  Header
@@ -141,13 +142,21 @@ b, strong {
     font-style: italic; }
 
 .MainContent {
-  padding: 30px 20px; }
+  padding: 15px 10px; }
+  @media screen and (min-width: 1024px) {
+    .MainContent {
+      /* MQ Widescreen */
+      padding: 30px 20px; } }
 
 .Section {
   border-bottom: 1px solid #ccc;
   padding: 10px;
-  padding-bottom: 30px;
-  margin-bottom: 20px; }
+  margin-bottom: 10px; }
+  @media screen and (min-width: 1024px) {
+    .Section {
+      /* MQ Widescreen */
+      padding-bottom: 30px;
+      margin-bottom: 20px; } }
   .Section .Section_desc {
     margin-bottom: 10px; }
   .Section .Section_code {
@@ -159,74 +168,16 @@ b, strong {
     font-size: 1.5em; }
   .Section .ClearFix {
     margin: 15px 0 0; }
+    .Section .ClearFix img {
+      margin-bottom: 10px; }
+      @media screen and (min-width: 1024px) {
+        .Section .ClearFix img {
+          /* MQ Widescreen */
+          float: left;
+          margin-bottom: 0; } }
   .Section img {
     max-width: 260px;
     border: 1px solid #999;
     margin-right: 20px; }
-
-.TooltipWrapper {
-  position: relative;
-  display: inline-block; }
-  .TooltipWrapper .TooltipWrapper_link {
-    cursor: pointer; }
-  .TooltipWrapper .TooltipWrapper_content {
-    display: none;
-    background: #f1f9ff;
-    border: 1px solid #97BFD8;
-    padding: 10px;
-    position: absolute;
-    z-index: 100;
-    margin-top: 18px;
-    white-space: nowrap; }
-    @media screen and (min-width: 600px) {
-      .TooltipWrapper .TooltipWrapper_content {
-        /* MQ Tablet */
-        max-width: 370px; } }
-    .TooltipWrapper .TooltipWrapper_content:before, .TooltipWrapper .TooltipWrapper_content:after {
-      content: '';
-      width: 0;
-      height: 0;
-      position: absolute;
-      left: 50%; }
-    .TooltipWrapper .TooltipWrapper_content.LeftArrow:before, .TooltipWrapper .TooltipWrapper_content.LeftArrow:after {
-      left: 30px; }
-    .TooltipWrapper .TooltipWrapper_content.RightArrow:before {
-      right: 30px;
-      left: auto; }
-    .TooltipWrapper .TooltipWrapper_content.RightArrow:after {
-      right: 31px;
-      left: auto; }
-    .TooltipWrapper .TooltipWrapper_content:before {
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      border-top: 15px solid #97BFD8;
-      border-bottom: none;
-      bottom: -16px;
-      top: auto;
-      margin-left: -15px; }
-    .TooltipWrapper .TooltipWrapper_content:after {
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-top: 14px solid #f1f9ff;
-      border-bottom: none;
-      bottom: -14px;
-      top: auto;
-      margin-left: -14px; }
-    .TooltipWrapper .TooltipWrapper_content.TooltipWrapper_content--showBelow:before {
-      border-left: 15px solid transparent;
-      border-right: 15px solid transparent;
-      border-bottom: 15px solid #97BFD8;
-      border-top: none;
-      top: -16px;
-      bottom: auto;
-      margin-left: -15px; }
-    .TooltipWrapper .TooltipWrapper_content.TooltipWrapper_content--showBelow:after {
-      border-left: 14px solid transparent;
-      border-right: 14px solid transparent;
-      border-bottom: 14px solid #f1f9ff;
-      border-top: none;
-      top: -14px;
-      bottom: auto;
-      margin-left: -14px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+.TooltipWrapper {
+  position: relative;
+  display: inline-block; }
+  .TooltipWrapper .TooltipWrapper_link {
+    cursor: pointer; }
+  .TooltipWrapper .TooltipWrapper_content {
+    display: none;
+    background: #f1f9ff;
+    border: 1px solid #97BFD8;
+    padding: 10px;
+    position: absolute;
+    z-index: 100;
+    margin-top: 18px;
+    white-space: nowrap; }
+    .TooltipWrapper .TooltipWrapper_content:before, .TooltipWrapper .TooltipWrapper_content:after {
+      content: '';
+      width: 0;
+      height: 0;
+      position: absolute;
+      left: 50%; }
+    .TooltipWrapper .TooltipWrapper_content.LeftArrow:before, .TooltipWrapper .TooltipWrapper_content.LeftArrow:after {
+      left: 30px; }
+    .TooltipWrapper .TooltipWrapper_content.RightArrow:before {
+      right: 30px;
+      left: auto; }
+    .TooltipWrapper .TooltipWrapper_content.RightArrow:after {
+      right: 31px;
+      left: auto; }
+    .TooltipWrapper .TooltipWrapper_content:before {
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-top: 15px solid #97BFD8;
+      border-bottom: none;
+      bottom: -16px;
+      top: auto;
+      margin-left: -15px; }
+    .TooltipWrapper .TooltipWrapper_content:after {
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-top: 14px solid #f1f9ff;
+      border-bottom: none;
+      bottom: -14px;
+      top: auto;
+      margin-left: -14px; }
+    .TooltipWrapper .TooltipWrapper_content.TooltipWrapper_content--showBelow:before {
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid #97BFD8;
+      border-top: none;
+      top: -16px;
+      bottom: auto;
+      margin-left: -15px; }
+    .TooltipWrapper .TooltipWrapper_content.TooltipWrapper_content--showBelow:after {
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 14px solid #f1f9ff;
+      border-top: none;
+      top: -14px;
+      bottom: auto;
+      margin-left: -14px; }
+
+/*# sourceMappingURL=tooltip.css.map */
