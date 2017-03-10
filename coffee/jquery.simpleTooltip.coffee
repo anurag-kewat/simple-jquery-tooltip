@@ -27,6 +27,7 @@
 				posBottom = elHeight + 20
 				posLeft = -(tooltipContent.width()/2 + 10)
 				posRight = "auto"
+				marginLeft = el.width()/2
 
 				elOffset = el.offset()
 
@@ -37,28 +38,27 @@
 					posTop = elHeight
 					posBottom = "auto"
 
-				marginLeft = el.width()/2
-
+				# if space on left is less than 100
 				if elOffset.left < 100
 					tooltipContent.addClass("LeftArrow")
 					posLeft = 0
 					marginLeft = 0
 
-				else if $(window).width() - elOffset.left < 130
+				# if space on right is less than 130
+				else if $(window).width() - elOffset.left < 130 
 					tooltipContent.addClass("RightArrow")
 					posLeft = "auto"
 					posRight = 0
 					marginLeft = 0
 
-				tooltipContent.css
+				tooltipContent.css(
 					"top": posTop
 					"bottom": posBottom
 					"left": posLeft
 					"right": posRight
 					"color": settings.fontColor
 					"margin-left": marginLeft
-
-				tooltipContent.show()
+				).show()
 
 			@isSpaceAbove = (elOffset, elHeight, tooltipContent) ->
 				elOffset.top - $(window).scrollTop() < elHeight + tooltipContent.height()

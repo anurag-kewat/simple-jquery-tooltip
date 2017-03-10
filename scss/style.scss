@@ -45,11 +45,13 @@
 }
 
 .Section {
-	background: $grey5;
-	border: 1px solid $grey4;
+	// background: $grey5;
+	// border: 1px solid $grey4;
+	border-bottom: 1px solid $grey4;
 	padding: 10px;
+	padding-bottom: 30px;
 	margin-bottom: 20px;
-
+	
 	.Section_desc {
 		margin-bottom: 10px;
 	}
@@ -63,6 +65,17 @@
 
 	.Section_demoTitle {
 		font-size: $size15;
+	}
+
+	.ClearFix {
+		margin: 15px 0 0;
+	}
+
+	img {
+		max-width: 260px;
+		// padding: 10px;
+		border: 1px solid #999;
+		margin-right: 20px;
 	}
 }
 

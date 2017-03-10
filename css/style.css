@@ -144,9 +144,9 @@ b, strong {
   padding: 30px 20px; }
 
 .Section {
-  background: #eee;
-  border: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
   padding: 10px;
+  padding-bottom: 30px;
   margin-bottom: 20px; }
   .Section .Section_desc {
     margin-bottom: 10px; }
@@ -157,6 +157,12 @@ b, strong {
     font-size: 1.4em; }
   .Section .Section_demoTitle {
     font-size: 1.5em; }
+  .Section .ClearFix {
+    margin: 15px 0 0; }
+  .Section img {
+    max-width: 260px;
+    border: 1px solid #999;
+    margin-right: 20px; }
 
 .TooltipWrapper {
   position: relative;
