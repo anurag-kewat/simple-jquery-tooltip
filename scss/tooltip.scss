@@ -2,6 +2,10 @@
 	position: relative;
 	display: inline-block;
 
+	.TooltipWrapper_link {
+		cursor: pointer;
+	}
+
 	.TooltipWrapper_content {
 		display: none;
 		background: #f1f9ff;

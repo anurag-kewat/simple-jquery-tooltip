@@ -167,6 +167,8 @@ b, strong {
 .TooltipWrapper {
   position: relative;
   display: inline-block; }
+  .TooltipWrapper .TooltipWrapper_link {
+    cursor: pointer; }
   .TooltipWrapper .TooltipWrapper_content {
     display: none;
     background: #f1f9ff;
