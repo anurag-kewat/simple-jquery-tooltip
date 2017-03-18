@@ -8,6 +8,7 @@ Quick and Easy Tooltip using CoffeeScript/Jquery
 Include files:
 ```html
 <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script> <!-- jQuery required -->
+<link rel="stylesheet" href="css/tooltip.css" charset="utf-8">
 <script type="text/javascript" src="js/jquery.simpleTooltip.js"></script>
 ```
 
@@ -24,12 +25,12 @@ HTML
 ```
 
 JavaScript/CoffeeScript
-```html
+```js
 $("#tooltipEg1").simpleTooltip()
 ```
 
 ### Options
-```html
+```js
 // To show tooltip below
 $("#tooltipEg2").simpleTooltip({
 	tooltipPos: "below"
