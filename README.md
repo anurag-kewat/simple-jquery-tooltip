@@ -2,7 +2,16 @@
 
 Quick and Easy Tooltip using CoffeeScript/Jquery
 
-## How to use
+## Getting started
+
+### Installation
+Include files:
+```html
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script> <!-- jQuery required -->
+<script type="text/javascript" src="js/jquery.simpleTooltip.js"></script>
+```
+
+### Usage
 
 HTML
 ```html
@@ -15,4 +24,14 @@ HTML
 ```
 
 JavaScript/CoffeeScript
-> $("#tooltipEg1").simpleTooltip()
+```html
+$("#tooltipEg1").simpleTooltip()
+```
+
+### Options
+```html
+// To show tooltip below
+$("#tooltipEg2").simpleTooltip({
+	tooltipPos: "below"
+});
+```
